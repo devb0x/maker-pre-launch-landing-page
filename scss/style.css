@@ -171,4 +171,60 @@ body {
   }
 }
 
+.features {
+  margin-top: 5vh;
+}
+.features .features__wrapper {
+  width: 327px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0;
+  grid-template-areas: "img" "img" "title" "text";
+}
+.features .features__wrapper .feature-item {
+  text-align: center;
+}
+.features .features__wrapper .feature-item__img {
+  grid-area: img;
+  display: flex;
+  margin: auto;
+  width: 120px;
+  height: 124px;
+  background-color: #093e67;
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+.features .features__wrapper .feature-item__title {
+  grid-area: title;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.features .features__wrapper .feature-item__text {
+  grid-area: text;
+  font-size: 15px;
+  font-weight: lighter;
+  color: #767f98;
+}
+
+#passions {
+  background-image: url("./../assets/illustration-passions.svg");
+}
+
+#financial {
+  background-image: url("./../assets/illustration-financial-freedom.svg");
+}
+
+#lifestyle {
+  background-image: url("./../assets/illustration-lifestyle.svg");
+}
+
+#work {
+  background-image: url("./../assets/illustration-work-anywhere.svg");
+  background-size: 65%;
+}
+
 /*# sourceMappingURL=style.css.map */
