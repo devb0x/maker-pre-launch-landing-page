@@ -167,31 +167,52 @@ body {
   .hero-container .hero-icon {
     position: absolute;
     left: 50%;
-    bottom: -7%;
+    bottom: -10%;
+    transform: translate(-50%, -50%);
   }
 }
 
 .features {
-  margin-top: 5vh;
+  margin-top: 9rem;
 }
 .features .features__wrapper {
-  width: 327px;
+  width: 20.438rem;
   margin: auto;
+}
+@media (min-width: 48em) {
+  .features .features__wrapper {
+    width: 573px;
+  }
+}
+.features .features__wrapper .feature-item {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 0;
+  row-gap: 0.688rem;
   grid-template-areas: "img" "img" "title" "text";
-}
-.features .features__wrapper .feature-item {
   text-align: center;
+  margin-bottom: 3.5rem;
+}
+@media (min-width: 48em) {
+  .features .features__wrapper .feature-item {
+    display: grid;
+    grid-template-columns: 0.75fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0 55px;
+    grid-template-areas: "img title" "img text";
+    width: 515px;
+    text-align: left;
+  }
+  .features .features__wrapper .feature-item:nth-child(odd) {
+    margin-left: auto;
+  }
 }
 .features .features__wrapper .feature-item__img {
   grid-area: img;
   display: flex;
   margin: auto;
-  width: 120px;
-  height: 124px;
+  width: 7.5rem;
+  height: 7.75rem;
   background-color: #093e67;
   border-radius: 50px;
   background-repeat: no-repeat;
@@ -200,14 +221,16 @@ body {
 }
 .features .features__wrapper .feature-item__title {
   grid-area: title;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bolder;
+  margin: auto 0;
 }
 .features .features__wrapper .feature-item__text {
   grid-area: text;
-  font-size: 15px;
+  font-size: 0.938rem;
   font-weight: lighter;
   color: #767f98;
+  line-height: 1.563rem;
 }
 
 #passions {

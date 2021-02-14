@@ -3,31 +3,52 @@
 
 .features {
 
-  margin-top: 5vh;
+  margin-top: 9rem;
 
   .features__wrapper {
 
-    width: 327px;
+    width: 20.438rem;
     margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0;
-    grid-template-areas:
-    "img"
-    "img"
-    "title"
-    "text";
+
+    @include breakpoint-up(tablet){
+      width: 573px;
+    }
 
     .feature-item {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      row-gap: 0.688rem;
+      grid-template-areas:
+      "img"
+      "img"
+      "title"
+      "text";
       text-align: center;
+      margin-bottom: 3.5rem;
+
+      @include breakpoint-up(tablet){
+        display: grid;
+        grid-template-columns: 0.75fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0 55px;
+        grid-template-areas:
+        "img title"
+        "img text";
+        width: 515px;
+        text-align: left;
+
+        &:nth-child(odd){
+          margin-left: auto;
+        }
+      }
 
       &__img {
         grid-area: img;
         display: flex;
         margin: auto;
-        width: 120px;
-        height: 124px;
+        width: 7.5rem;
+        height: 7.75rem;
         background-color: $darkBlue;
         border-radius: 50px;
         background-repeat: no-repeat;
@@ -37,15 +58,17 @@
 
       &__title {
         grid-area: title;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: bolder;
+        margin: auto 0;
       }
 
       &__text {
         grid-area: text;
-        font-size: 15px;
+        font-size: 0.938rem;
         font-weight: lighter;
         color: $gray;
+        line-height: 1.563rem;
       }
 
     }
