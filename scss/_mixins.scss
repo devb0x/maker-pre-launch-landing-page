@@ -2,10 +2,11 @@
 // tablet width 768
 // desktop width 1440
 
-$breakpoints-up: ("tablet": "41.625em", "desktop": "51.21em");
+// 768px - 1440px
+$breakpoints-up: ("tablet": "48em", "desktop": "90em");
 
-// landscape: 667px large: 993px
-$breakpoints-down: ("tablet": "41.6875em", "desktop": "51.2em");
+// 767px - 1439px
+$breakpoints-down: ("tablet": "47.9375em", "desktop": "89.9375em");
 
 @mixin breakpoint-up($size) {
   @media (min-width: map-get($breakpoints-up, $size)){

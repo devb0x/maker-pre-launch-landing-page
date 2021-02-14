@@ -14,4 +14,25 @@ body {
   margin: 0;
   padding: 0;
   font-family: $manrope;
+  background-color: $veryDarkBlue;
+  color: $white;
+}
+
+.blueText {
+  color: $lightBlue;
+}
+
+
+// Visibility
+
+.hide-for-mobile{
+  @include breakpoint-down(tablet){
+    display: none;
+  }
+}
+
+.hide-for-tablet {
+  @include breakpoint-up(tablet){
+    display: none;
+  }
 }
