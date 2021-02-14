@@ -38,7 +38,7 @@ body {
 }
 @media (min-width: 90em) {
   .header {
-    height: 213px;
+    height: 13.313rem;
   }
 }
 .header img {
@@ -66,7 +66,7 @@ body {
 }
 .hero-bg__left {
   position: absolute;
-  margin-left: calc(-60vw - 160px);
+  margin-left: calc(-60vw - 10rem);
   height: 22.313rem;
   width: 100%;
   background-image: url("./../assets/illustration-hero-left.svg");
@@ -76,8 +76,8 @@ body {
 }
 @media (min-width: 90em) {
   .hero-bg__left {
-    margin-left: calc(-69vw - 170px);
-    height: 459px;
+    margin-left: calc(-60vw - 14.063rem);
+    height: 28.688rem;
   }
 }
 .hero-bg__right {
@@ -93,6 +93,7 @@ body {
 @media (min-width: 90em) {
   .hero-bg__right {
     height: 28.688rem;
+    margin-left: calc(68vw + 8.75rem);
   }
 }
 .hero-container {
@@ -181,7 +182,16 @@ body {
 }
 @media (min-width: 48em) {
   .features .features__wrapper {
-    width: 573px;
+    width: 35.813rem;
+  }
+}
+@media (min-width: 90em) {
+  .features .features__wrapper {
+    margin-top: 14.063rem;
+    width: 69.375rem;
+    height: 23.938rem;
+    display: flex;
+    justify-content: space-between;
   }
 }
 .features .features__wrapper .feature-item {
@@ -198,13 +208,35 @@ body {
     display: grid;
     grid-template-columns: 0.75fr 2fr;
     grid-template-rows: 1fr 1fr;
-    gap: 0 55px;
+    gap: 0 3.438rem;
     grid-template-areas: "img title" "img text";
-    width: 515px;
+    width: 32.188rem;
     text-align: left;
   }
   .features .features__wrapper .feature-item:nth-child(odd) {
     margin-left: auto;
+  }
+}
+@media (min-width: 48em) and (min-width: 90em) {
+  .features .features__wrapper .feature-item:nth-child(odd) {
+    margin-left: unset;
+  }
+}
+@media (min-width: 48em) and (min-width: 90em) {
+  .features .features__wrapper .feature-item:nth-child(even) {
+    margin: auto 0 0 0;
+  }
+}
+@media (min-width: 90em) {
+  .features .features__wrapper .feature-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 0.688rem;
+    grid-template-areas: "img" "img" "title" "text";
+    text-align: left;
+    margin-bottom: 3.5rem;
+    width: 15.313rem;
   }
 }
 .features .features__wrapper .feature-item__img {
@@ -214,10 +246,17 @@ body {
   width: 7.5rem;
   height: 7.75rem;
   background-color: #093e67;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
+}
+@media (min-width: 90em) {
+  .features .features__wrapper .feature-item__img {
+    width: 10.25rem;
+    height: 10.25rem;
+    margin-left: 0;
+  }
 }
 .features .features__wrapper .feature-item__title {
   grid-area: title;

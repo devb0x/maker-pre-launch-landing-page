@@ -12,7 +12,7 @@
 
     &__left {
       position: absolute;
-      margin-left: calc(-60vw - 160px);
+      margin-left: calc(-60vw - 10rem);
       height: 22.313rem;
       width: 100%;
       background-image: url("./../assets/illustration-hero-left.svg");
@@ -21,8 +21,8 @@
       background-position: right;
 
       @include breakpoint-up(desktop){
-        margin-left: calc(-69vw - 170px);
-        height: 459px;
+        margin-left: calc(-60vw - 14.063rem);
+        height: 28.688rem;
       }
     }
 
@@ -38,6 +38,7 @@
 
       @include breakpoint-up(desktop){
         height: 28.688rem;
+        margin-left: calc(68vw + 8.75rem);
       }
     }
   }
