@@ -143,7 +143,7 @@ body {
   text-align: center;
   font-size: 0.938rem;
   line-height: 1.563rem;
-  color: #767f98;
+  color: #777F98;
 }
 @media (min-width: 48em) {
   .hero-container .hero-description {
@@ -198,7 +198,6 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  row-gap: 0.688rem;
   grid-template-areas: "img" "img" "title" "text";
   text-align: center;
   margin-bottom: 3.5rem;
@@ -268,7 +267,7 @@ body {
   grid-area: text;
   font-size: 0.938rem;
   font-weight: lighter;
-  color: #767f98;
+  color: #777F98;
   line-height: 1.563rem;
 }
 
@@ -287,6 +286,63 @@ body {
 #work {
   background-image: url("./../assets/illustration-work-anywhere.svg");
   background-size: 65%;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  margin: 140px auto;
+  width: 327px;
+  text-align: center;
+  position: relative;
+}
+.cta-free__icon img {
+  position: absolute;
+  top: 197px;
+}
+.cta-title h2 {
+  font-size: 24px;
+  font-weight: bolder;
+}
+.cta-title p {
+  color: #777F98;
+  font-size: 15px;
+  line-height: 25px;
+}
+.cta-free {
+  background-color: #093e67;
+  border-radius: 10px;
+  height: 407px;
+  display: flex;
+  flex-direction: column;
+  margin: 56px auto;
+  padding: 0 29px;
+  justify-content: space-around;
+  text-align: left;
+}
+.cta-free__title {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.cta-free__text {
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 25px;
+}
+.cta-free__plan {
+  font-size: 40px;
+  font-weight: bolder;
+}
+.cta-free__list > ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+  font-weight: lighter;
+  line-height: 35px;
+}
+.cta-free__list > ul > li span {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
