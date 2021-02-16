@@ -5,55 +5,90 @@
 
   display: flex;
   flex-direction: column;
-  margin: 140px auto;
-  width: 327px;
+  margin: 6.875rem auto;
+  width: 20.438rem;
   text-align: center;
-  position: relative;
 
-  &-free__icon img {
-    position: absolute;
-    top: 197px;
+  @include breakpoint-up(tablet){
+    width: 35.813rem;
+  }
+
+  @include breakpoint-up(desktop){
+    width: auto;
   }
 
   &-title {
 
+    @include breakpoint-up(desktop){
+      width: 33.75rem;
+      margin: auto;
+    }
+
     h2 {
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: bolder;
+
+      @include breakpoint-up(desktop){
+        font-size: 2rem;
+      }
     }
 
     p {
       color: $gray;
-      font-size: 15px;
-      line-height: 25px;
+      font-size: 0.938rem;
+      line-height: 1.563rem;
+    }
+  }
+
+  &-wrapper {
+
+    @include breakpoint-up(desktop){
+      display: flex;
+      margin: 3.75rem auto;
     }
   }
 
   &-free {
     background-color: $darkBlue;
-    border-radius: 10px;
-    height: 407px;
+    border-radius: 0.625rem;
+    height: 25.438rem;
     display: flex;
     flex-direction: column;
-    margin: 56px auto;
-    padding: 0 29px;
-    justify-content: space-around;
+    margin: 3.5rem auto;
+    padding: 0 2.25rem;
+    justify-content: space-evenly;
     text-align: left;
+    position: relative;
+
+    @include breakpoint-up(tablet){
+      width: 27.813rem;
+      height: 28rem;
+      padding: 0 2.5rem;
+    }
+
+    @include breakpoint-up(desktop){
+      margin-right: 1.875rem;
+      align-self: center;
+    }
+
+    &__icon img {
+      position: absolute;
+      top: -2rem;
+    }
 
     &__title {
-      margin-top: 20px;
-      font-size: 18px;
+      font-size: 1.125rem;
       font-weight: bolder;
     }
 
     &__text {
-      font-size: 15px;
+      font-size: 0.938rem;
       font-weight: lighter;
-      line-height: 25px;
+      line-height: 1.563rem;
     }
 
     &__plan {
-      font-size: 40px;
+      font-size: 2.5rem;
       font-weight: bolder;
     }
 
@@ -62,16 +97,81 @@
       & > ul {
         list-style: none;
         padding: 0;
-        font-size: 15px;
+        font-size: 0.938rem;
         font-weight: lighter;
-        line-height: 35px;
+        line-height: 2.188rem;
 
         & > li span {
-          margin-right: 10px;
+          margin-right: 0.625rem;
         }
       }
 
     }
-  }
+  } // end .cta-free
+
+  &-paid {
+    background-color: $lightBlue;
+    color: $veryDarkBlue;
+    border-radius: 0.625rem;
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    margin: 3.5rem auto;
+    padding: 0 2.25rem;
+    justify-content: space-evenly;
+    text-align: left;
+    position: relative;
+
+    @include breakpoint-up(tablet){
+      width: 27.813rem;
+      height: 30.125rem;
+      padding: 0 2.75rem;
+    }
+
+    &__icon img {
+      position: absolute;
+      top: -2.125rem;
+    }
+
+    &__title {
+      font-size: 1.125rem;
+      font-weight: bolder;
+    }
+
+    &__text {
+      font-size: 0.938rem;
+      font-weight: lighter;
+      line-height: 1.563rem;
+    }
+
+    &__plan {
+      display: flex;
+      font-size: 2.5rem;
+      font-weight: bolder;
+
+      & > span {
+        font-size: 0.938rem;
+        align-self: center;
+        font-weight: 300;
+        margin-left: 0.625rem;
+      }
+    }
+
+    &__list {
+
+      & > ul {
+        list-style: none;
+        padding: 0;
+        font-size: 0.938rem;
+        font-weight: inherit;
+        line-height: 2.188rem;
+
+        & > li span {
+          margin-right: 0.625rem;
+        }
+      }
+
+    }
+  } // end .cta-paid
 
 }
