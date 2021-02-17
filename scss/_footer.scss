@@ -6,17 +6,26 @@
   display: flex;
   flex-direction: column;
   margin: auto auto 164px;
+  position: relative;
 
   &-background {
     width: 100vw;
     height: 80px;
     position: absolute;
     left: 0;
+    z-index: 0;
 
     background-image: url("./../assets/bg-footer-squiggle.svg");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
+
+    @include breakpoint-up(tablet){
+      width: 100%;
+      height: 140px;
+      background-position-x: right;
+      //display: none;
+    }
   }
 
   &-title {
@@ -25,6 +34,7 @@
     text-align: center;
     font-size: 24px;
     font-weight: bolder;
+    z-index: 1;
 
     & > h3 {
       margin: 0;
@@ -37,6 +47,21 @@
     flex-direction: column;
     width: 100%;
     margin-top: 38px;
+    z-index: 1;
+
+    @include breakpoint-up(tablet){
+      width: 476px;
+      flex-direction: unset;
+      margin: 29px auto;
+    }
+
+    & label {
+
+      @include breakpoint-up(tablet){
+        margin: auto;
+        width: 320px;
+      }
+    }
 
     & input {
       width: 100%;
@@ -48,6 +73,10 @@
       font-weight: bolder;
       margin-bottom: 24px;
       outline: none;
+
+      @include breakpoint-up(tablet){
+        width: 320px;
+      }
 
       &::placeholder {
         opacity: 60%;
@@ -62,6 +91,10 @@
       border-radius: 25px;
       font-weight: bolder;
       font-size: 15px;
+
+      @include breakpoint-up(tablet){
+        width: 140px;
+      }
     }
   }
 

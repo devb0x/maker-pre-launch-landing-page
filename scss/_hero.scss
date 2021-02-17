@@ -2,6 +2,7 @@
 @import "mixins";
 
 .hero {
+  position: relative;
 
   &-bg {
     min-height: 14.563rem;
@@ -30,15 +31,16 @@
       position: absolute;
       margin-left: 81%;
       height:  22.313rem;
-      width: 25.5rem;
+      width: 19%;
       background-image: url("./../assets/illustration-hero-right.svg");
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
       background-position: left;
 
       @include breakpoint-up(desktop){
         height: 28.688rem;
-        margin-left: calc(68vw + 8.75rem);
+        width: 22%;
+        margin-left: 78%;
       }
     }
   }
