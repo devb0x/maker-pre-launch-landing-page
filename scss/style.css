@@ -443,7 +443,6 @@ body {
 }
 
 .footer {
-  width: 80vw;
   display: flex;
   flex-direction: column;
   margin: auto auto 164px;
@@ -462,9 +461,16 @@ body {
 }
 @media (min-width: 48em) {
   .footer-background {
-    width: 100%;
+    position: absolute;
+    width: 1022px;
     height: 140px;
-    background-position-x: right;
+  }
+}
+@media (min-width: 90em) {
+  .footer-background {
+    width: 1664.13px;
+    height: 228px;
+    left: -223.7px;
   }
 }
 .footer-title {
@@ -478,11 +484,21 @@ body {
 .footer-title > h3 {
   margin: 0;
 }
+@media (min-width: 48em) {
+  .footer-title > h3 {
+    margin-top: 15px;
+  }
+}
+@media (min-width: 90em) {
+  .footer-title > h3 {
+    font-size: 32px;
+  }
+}
 .footer form {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-top: 38px;
+  width: 90%;
+  margin: 38px auto;
   z-index: 1;
 }
 @media (min-width: 48em) {
@@ -490,12 +506,14 @@ body {
     width: 476px;
     flex-direction: unset;
     margin: 29px auto;
+    justify-content: space-between;
   }
 }
 @media (min-width: 48em) {
   .footer form label {
     margin: auto;
     width: 320px;
+    display: contents;
   }
 }
 .footer form input {
@@ -514,17 +532,28 @@ body {
     width: 320px;
   }
 }
+.footer form input:focus {
+  border: 2px solid #3eeae7;
+}
 .footer form input::placeholder {
   opacity: 60%;
 }
 .footer form button {
+  cursor: pointer;
   background-color: #3eeae7;
   color: #093e67;
   border: none;
   height: 48px;
-  border-radius: 25px;
+  border-radius: 24px;
   font-weight: bolder;
   font-size: 15px;
+  padding: 0;
+}
+.footer form button:active {
+  outline: none;
+}
+.footer form button:focus {
+  outline: none;
 }
 @media (min-width: 48em) {
   .footer form button {
@@ -534,10 +563,6 @@ body {
 .footer .form-email {
   background-color: #093e67;
   border: none;
-}
-
-body {
-  background-color: #dbdd87;
 }
 
 /*# sourceMappingURL=style.css.map */

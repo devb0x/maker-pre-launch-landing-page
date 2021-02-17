@@ -2,7 +2,6 @@
 @import "mixins";
 
 .footer {
-  width: 80vw;
   display: flex;
   flex-direction: column;
   margin: auto auto 164px;
@@ -21,10 +20,16 @@
     background-repeat: no-repeat;
 
     @include breakpoint-up(tablet){
-      width: 100%;
+      position: absolute;
+      width: 1022px;
       height: 140px;
-      background-position-x: right;
-      //display: none;
+      //left: -240px;
+    }
+
+    @include breakpoint-up(desktop){
+      width: 1664.13px;
+      height: 228px;
+      left: -223.7px;
     }
   }
 
@@ -38,6 +43,14 @@
 
     & > h3 {
       margin: 0;
+
+      @include breakpoint-up(tablet){
+        margin-top: 15px;
+      }
+
+      @include breakpoint-up(desktop){
+        font-size: 32px;
+      }
     }
 
   }
@@ -45,14 +58,15 @@
   form {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin-top: 38px;
+    width: 90%;
+    margin: 38px auto;
     z-index: 1;
 
     @include breakpoint-up(tablet){
       width: 476px;
       flex-direction: unset;
       margin: 29px auto;
+      justify-content: space-between;
     }
 
     & label {
@@ -60,6 +74,7 @@
       @include breakpoint-up(tablet){
         margin: auto;
         width: 320px;
+        display: contents;
       }
     }
 
@@ -78,20 +93,32 @@
         width: 320px;
       }
 
+      &:focus {
+        border: 2px solid $lightBlue;
+      }
+
       &::placeholder {
         opacity: 60%;
       }
     }
 
     & button {
+      cursor: pointer;
       background-color: $lightBlue;
       color: $darkBlue;
       border: none;
       height: 48px;
-      border-radius: 25px;
+      border-radius: 24px;
       font-weight: bolder;
       font-size: 15px;
+      padding: 0;
 
+      &:active {
+        outline: none;
+      }
+      &:focus {
+        outline: none;
+      }
       @include breakpoint-up(tablet){
         width: 140px;
       }
@@ -102,8 +129,4 @@
     background-color: $darkBlue;
     border: none;
   }
-}
-
-body {
-  background-color: #dbdd87;
 }
