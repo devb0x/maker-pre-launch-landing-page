@@ -19,6 +19,35 @@ body {
   color: #3eeae7;
 }
 
+#info-message {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  font-size: 0.75rem;
+}
+@media (min-width: 48em) {
+  #info-message {
+    display: flex;
+    margin: auto;
+    text-align: left;
+    width: 26.5rem;
+  }
+}
+
+.validate-msg {
+  text-align: center;
+  color: #3eeae7;
+}
+
+.error-msg {
+  text-align: center;
+  color: #ff2965;
+}
+
+.error-border {
+  border: 0.125rem solid #ff2965 !important;
+}
+
 @media (max-width: 47.9375em) {
   .hide-for-mobile {
     display: none;
@@ -445,12 +474,12 @@ body {
 .footer {
   display: flex;
   flex-direction: column;
-  margin: auto auto 164px;
+  margin: auto auto 10.25rem;
   position: relative;
 }
 .footer-background {
   width: 100vw;
-  height: 80px;
+  height: 5rem;
   position: absolute;
   left: 0;
   z-index: 0;
@@ -462,22 +491,22 @@ body {
 @media (min-width: 48em) {
   .footer-background {
     position: absolute;
-    width: 1022px;
-    height: 140px;
+    width: 63.875rem;
+    height: 8.75rem;
   }
 }
 @media (min-width: 90em) {
   .footer-background {
-    width: 1664.13px;
-    height: 228px;
-    left: -223.7px;
+    width: 104.008rem;
+    height: 14.25rem;
+    left: -13.981rem;
   }
 }
 .footer-title {
   width: 70vw;
   margin: 0 auto;
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bolder;
   z-index: 1;
 }
@@ -486,54 +515,54 @@ body {
 }
 @media (min-width: 48em) {
   .footer-title > h3 {
-    margin-top: 15px;
+    margin-top: 0.938rem;
   }
 }
 @media (min-width: 90em) {
   .footer-title > h3 {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 .footer form {
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin: 38px auto;
+  margin: 2.375rem auto 0;
   z-index: 1;
 }
 @media (min-width: 48em) {
   .footer form {
-    width: 476px;
+    width: 29.75rem;
     flex-direction: unset;
-    margin: 29px auto;
+    margin: 1.813rem auto 0;
     justify-content: space-between;
   }
 }
 @media (min-width: 48em) {
   .footer form label {
     margin: auto;
-    width: 320px;
+    width: 20rem;
     display: contents;
   }
 }
 .footer form input {
   width: 100%;
-  height: 48px;
-  border-radius: 25px;
-  padding-left: 25px;
+  height: 3rem;
+  border-radius: 1.563rem;
+  padding-left: 1.563rem;
   color: white;
-  font-size: 15px;
+  font-size: 0.938rem;
   font-weight: bolder;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   outline: none;
 }
 @media (min-width: 48em) {
   .footer form input {
-    width: 320px;
+    width: 20rem;
   }
 }
 .footer form input:focus {
-  border: 2px solid #3eeae7;
+  border: 0.125rem solid #3eeae7;
 }
 .footer form input::placeholder {
   opacity: 60%;
@@ -543,11 +572,18 @@ body {
   background-color: #3eeae7;
   color: #093e67;
   border: none;
-  height: 48px;
-  border-radius: 24px;
+  height: 3rem;
+  margin-bottom: 0.625rem;
+  border-radius: 1.5rem;
   font-weight: bolder;
-  font-size: 15px;
+  font-size: 0.938rem;
   padding: 0;
+  transition: all 0.4s ease-in-out;
+}
+.footer form button:hover {
+  background-color: #080c21;
+  color: white;
+  border: 0.125rem solid #3eeae7;
 }
 .footer form button:active {
   outline: none;
@@ -557,7 +593,7 @@ body {
 }
 @media (min-width: 48em) {
   .footer form button {
-    width: 140px;
+    width: 8.75rem;
   }
 }
 .footer .form-email {

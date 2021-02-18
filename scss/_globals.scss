@@ -22,6 +22,35 @@ body {
   color: $lightBlue;
 }
 
+// Form message
+
+#info-message {
+  width: 80%;
+  margin: auto;
+  text-align: left;
+  font-size: 0.75rem;
+
+  @include breakpoint-up(tablet){
+    display: flex;
+    margin: auto;
+    text-align: left;
+    width: 26.5rem;
+  }
+}
+
+.validate-msg {
+  text-align: center;
+  color: $lightBlue;
+}
+
+.error-msg {
+  text-align: center;
+  color: $errorRed;
+}
+
+.error-border {
+  border: 0.125rem solid $errorRed !important;
+}
 
 // Visibility
 

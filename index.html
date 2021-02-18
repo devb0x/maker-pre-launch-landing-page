@@ -202,14 +202,17 @@
 
     <div class="footer-background"></div>
 
-    <form action="">
-      <label>
-        <input type="email" placeholder="Email address" class="form-email">
-      </label>
-      <button type="button">Get notified</button>
+    <form id="form-subscribe" novalidate>
+      <label for="email" style="display: none"></label>
+        <input type="email" id="email" placeholder="Email address" class="form-email">
+
+      <button type="submit">Get notified</button>
     </form>
+
+    <div id="info-message" style="display: none"></div>
 
   </footer>
 
+  <script src="./js/script.js"></script>
 </body>
 </html>
