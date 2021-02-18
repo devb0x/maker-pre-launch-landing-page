@@ -23,6 +23,7 @@
       position: absolute;
       width: 63.875rem;
       height: 8.75rem;
+      left: -15rem;
     }
 
     @include breakpoint-up(desktop){
@@ -49,6 +50,7 @@
 
       @include breakpoint-up(desktop){
         font-size: 2rem;
+        margin: 50px auto auto;
       }
     }
 
